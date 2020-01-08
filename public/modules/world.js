@@ -1,9 +1,4 @@
-var WORLD = window.WORLD = {
-    leftcontroller: undefined,
-    rightcontroller: undefined,
-};
-
-WORLD.init = function () {
+export function init() {
     var canvas = document.createElement('canvas');
     canvas.setAttribute('touch-action', 'none');
     document.body.appendChild(canvas);
@@ -13,8 +8,8 @@ WORLD.init = function () {
     var scene = new BABYLON.Scene(engine);
     var vrhelper = scene.createDefaultVRExperience();
     vrhelper.onControllerMeshLoadedObservable.add(function (controller) {
-        if (controller.hand === 'right') WORLD.leftcontroller = controller;
-        else WORLD.rightcontroller = controller;
+        //if (controller.hand === 'right') WORLD.leftcontroller = controller;
+        //else WORLD.rightcontroller = controller;
     });
 
     //var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
