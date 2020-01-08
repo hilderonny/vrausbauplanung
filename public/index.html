@@ -13,11 +13,12 @@
     <script>
         window.addEventListener('load', function () {
             WORLD.init();
-            var cons = CONSOLE.createinstance(8, 5, 80, 27);
+            var cons = CONSOLE.createinstance(8, 5, 80, 26);
             cons.position = new BABYLON.Vector3(0, 2, 10);
             setInterval(() => {
+                //cons.write('123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789X');
                 cons.write({x:45,z:'a',r:false,u:Date.now()});
-                cons.write('\n');
+                //cons.write('\n');
             }, 10);
         });
     </script>

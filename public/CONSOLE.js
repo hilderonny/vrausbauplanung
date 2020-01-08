@@ -15,10 +15,8 @@ CONSOLE.createinstance = function(width, height, columns, rows) {
     rect.background = 'black';
     advancedTexture.addControl(rect);
     var style = advancedTexture.createStyle();
-    // Monospace has relation 1:0.55
-    style.fontSize = (width / columns * 165) + 'px';
-    style.fontFamily = "Monospace";
-    // See https://www.babylonjs-playground.com/#1CABMS#28
+    style.fontSize = (width / columns * 164) + 'px';
+    style.fontFamily = "Courier New";
     CONSOLE.textblock = new BABYLON.GUI.TextBlock();
     CONSOLE.textblock.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
     CONSOLE.textblock.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
