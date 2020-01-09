@@ -29,9 +29,8 @@ export function createinstance(scene, color) {
     var rows = 25;
     var factor = 20;
     var whfac = 49;
-    var options = { width: columns / factor, height: rows * 100 / factor / whfac };
     // {width: 4, height: 2.5510204081632653}
-    console.log(options);
+    var options = { width: columns / factor, height: rows * 100 / factor / whfac };
     var plane = BABYLON.MeshBuilder.CreatePlane('CONSOLE', options, scene);
     var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane, columns * factor, rows * factor / whfac * 90);
     var rect = new BABYLON.GUI.Rectangle();
